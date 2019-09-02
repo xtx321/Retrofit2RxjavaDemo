@@ -49,7 +49,7 @@ public class ResponseTransformer {
         public ObservableSource<T> apply(Response<T> tResponse) throws Exception {
             int code = tResponse.getRetcode();
             String msg = tResponse.getMsg();
-            Log.d(TAG,"apply code="+code+", msg="+msg+", data="+tResponse.getData());
+            Log.d(TAG,"apply code="+code+", msg="+msg+", data=="+tResponse.getData());
             if (code == 200) {
                 return Observable.just(tResponse.getData());
             } else {
